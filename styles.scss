@@ -20,8 +20,8 @@ $white: hsl(0, 0%, 100%);
 }
 body {
   font-family: "Kumbh Sans", sans-serif;
+  position: relative;
 }
-
 .flex {
   display: flex;
   gap: 1rem;
@@ -56,20 +56,16 @@ li {
     height: 40px;
   }
 }
-.open .navigation {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-}
+
 .navigation {
   background: #fff;
-  display: block;
+  display: none;
   position: absolute;
   top: 50px;
   left: 0;
   height: 100vh;
   width: 60%;
+
   a {
     text-decoration: none;
     font-weight: 700;
@@ -78,6 +74,12 @@ li {
     margin: 2rem;
     margin-left: 1.25rem;
   }
+}
+.open .navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 .product {
   min-width: 100%;
