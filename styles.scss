@@ -21,3 +21,78 @@ $white: hsl(0, 0%, 100%);
 body {
   font-family: "Kumbh Sans", sans-serif;
 }
+
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+.header {
+  //background: steelblue;
+  height: 60px;
+  padding: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-svgs {
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  color: $dark_grayish_blue;
+}
+li {
+  list-style: none;
+}
+
+.rightIcons {
+  display: flex;
+  align-items: center;
+
+  .cart {
+    margin-right: 2rem;
+    height: 20px;
+  }
+  .avatar {
+    height: 40px;
+  }
+}
+.open .navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.navigation {
+  background: #fff;
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: 100vh;
+  width: 60%;
+  a {
+    text-decoration: none;
+    font-weight: 700;
+  }
+  li {
+    margin: 2rem;
+    margin-left: 1.25rem;
+  }
+}
+.product {
+  min-width: 100%;
+  max-height: 30vh;
+}
+@media only screen and (min-width: 600px) {
+  header nav {
+    display: none;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .icon {
+    display: none;
+  }
+  .logo {
+    margin-left: 30px;
+  }
+}
