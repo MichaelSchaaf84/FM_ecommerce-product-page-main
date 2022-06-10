@@ -8,7 +8,7 @@ function addItems(sum) {
   document.querySelector(".amount").innerHTML = amountCounter;
 
   console.log(amountCounter);
-
+  // showCircle();
   //return amountCounter;
 }
 
@@ -34,6 +34,8 @@ function addToCart(add) {
   add = amountCounter;
   console.log(amountCounter);
   updateCart();
+  updateCountCircle();
+  showCircle();
 }
 
 function updateCart() {
@@ -68,4 +70,17 @@ function calculate() {
   const price = 125;
   let sum = price * amountCounter;
   return sum;
+}
+
+function updateCountCircle() {
+  document.querySelector(".circle").innerHTML = amountCounter;
+}
+function showCircle() {
+  console.log(amountCounter);
+  let showCircle = document.querySelector(".circle");
+  if (amountCounter >= 1) {
+    showCircle.style.display === "block";
+  } else {
+    showCircle.style.display === "none";
+  }
 }
