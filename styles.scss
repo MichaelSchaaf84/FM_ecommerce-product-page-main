@@ -47,7 +47,8 @@ li {
   display: flex;
   align-items: center;
 
-  .cart {
+  .cartIcon {
+    cursor: pointer;
     margin-right: 2rem;
     height: 20px;
   }
@@ -99,7 +100,7 @@ li {
   }
   p {
     font-size: 16px;
-    color: $grayish_blue;
+    color: $dark_grayish_blue;
     line-height: 1.5;
   }
   .price {
@@ -177,6 +178,32 @@ li {
     width: auto;
     margin-right: 1.5rem;
     color: #fff;
+  }
+}
+.cart {
+  display: none;
+  height: 26vh;
+  width: 94%;
+  position: absolute;
+  border-radius: 8px;
+  background: #fff;
+  //padding: 1rem;
+  margin: 1rem;
+  h3 {
+    padding: 1rem;
+  }
+  hr {
+    width: 100%;
+    border: solid 1px;
+    color: $grayish_blue;
+  }
+  .cart-body {
+    margin-top: 60px;
+    text-align: center;
+    p {
+      font-weight: 700;
+      color: $dark_grayish_blue;
+    }
   }
 }
 

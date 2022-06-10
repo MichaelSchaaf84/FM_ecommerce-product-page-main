@@ -46,11 +46,20 @@
         </div>
       </nav>
       <div class="rightIcons">
-        <img class="cart" src="./images/icon-cart.svg" alt="" srcset="" />
+        <img onclick="showCart()" class="cartIcon" src="./images/icon-cart.svg" alt="" srcset="" />
         <img class="avatar" src="./images/image-avatar.png" alt="" srcset="" />
       </div>
     </header>
     <section>
+      <div class="cart">
+       
+        <h3>Cart</h3>
+        <hr>
+        <div class="cart-body">
+          <p>Your cart is empty.</p>
+        </div>
+      
+      </div>
       <img class="product" src="./images/image-product-1.jpg" alt="" />
       <div class="wrapper ">
       <h3>Sneaker Company</h3>
@@ -68,11 +77,11 @@
       <div class="old-price">$250.00</div>
       </div>
       <div class="btn-wrapper ">
-      <button class="less"><img src="./images/icon-minus.svg" alt="+" srcset=""></button>
+      <button onclick="subItems()" class="less"><img src="./images/icon-minus.svg" alt="+" srcset=""></button>
       <p class="amount">0</p>
-      <button class="more"><img src="./images/icon-plus.svg" alt="+" srcset=""></button>
+      <button onclick="addItems()" class="more"><img src="./images/icon-plus.svg" alt="+" srcset=""></button>
       </div>
-      <button id="btnAddToCart"><img class="cart-btn" src="./images/icon-cartWhite.svg" alt="" srcset=""> Add to cart</button>
+      <button id="btnAddToCart"><img class="cart-btn" src="./images/icon-cartWhite.svg" alt="" srcset="">Add to cart</button>
       </div>
     </section>
   </body>
