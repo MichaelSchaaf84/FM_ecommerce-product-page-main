@@ -51,14 +51,13 @@
       </div>
     </header>
     <section>
-      <div class="cart">
-       
-        <h3>Cart</h3>
+      <div id="cart" class="cart">
+       <h3>Cart</h3>
         <hr>
         <div class="cart-body">
           <p>Your cart is empty.</p>
         </div>
-      
+        
       </div>
       <img class="product" src="./images/image-product-1.jpg" alt="" />
       <div class="wrapper ">
@@ -81,7 +80,7 @@
       <p class="amount">0</p>
       <button onclick="addItems()" class="more"><img src="./images/icon-plus.svg" alt="+" srcset=""></button>
       </div>
-      <button id="btnAddToCart"><img class="cart-btn" src="./images/icon-cartWhite.svg" alt="" srcset="">Add to cart</button>
+      <button onclick="addToCart()" id="btnAddToCart"><img class="cart-btn" src="./images/icon-cartWhite.svg" alt="" srcset="">Add to cart</button>
       </div>
     </section>
   </body>
