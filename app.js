@@ -4,7 +4,7 @@ function toggleMenu(icon) {
 
 let amountCounter = 0;
 function addItems(sum) {
-  amountCounter += 1;
+  amountCounter++;
   document.querySelector(".amount").innerHTML = amountCounter;
 
   console.log(amountCounter);
@@ -13,7 +13,7 @@ function addItems(sum) {
 
 function subItems() {
   if (amountCounter > 0) {
-    amountCounter -= 1;
+    amountCounter--;
   }
   document.querySelector(".amount").innerHTML = amountCounter;
   console.log(amountCounter);
@@ -39,7 +39,10 @@ function addToCart(add) {
 
 function updateCart() {
   if (amountCounter >= 1) {
-    html = `<h3>Cart</h3>
+    html = ` <div class="closingCart-wrapper">
+       <h3>Cart</h3>
+       <img  onclick="showCart()"class="closingIcon" src="./images/icon-close.svg" alt="" srcset="">
+       </div>
         <hr>
         <div class="cart-body">
           <div class="cart-display">
@@ -54,7 +57,10 @@ function updateCart() {
         </div>
       `;
   } else {
-    html = ` <h3>Cart</h3>
+    html = `  <div class="closingCart-wrapper">
+       <h3>Cart</h3>
+       <img  onclick="showCart()"class="closingIcon" src="./images/icon-close.svg" alt="" srcset="">
+       </div>
         <hr>
         <div class="cart-body">
           <p>Your cart is empty.</p>
@@ -89,4 +95,37 @@ function deletCart() {
   showCircle();
   updateCart();
   updateCountCircle();
+}
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
 }

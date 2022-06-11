@@ -16,9 +16,9 @@
     <title>Frontend Mentor | E-commerce product page</title>
   </head>
   <body>
-    <header class="header flex">
+    <header class="header ">
       <div onclick="toggleMenu(this)">
-      <div class="header-svgs flex">
+      <div class="header-svgs ">
          <svg
          
          class="icon"
@@ -57,14 +57,54 @@
     </header>
     <section>
       <div style="display:none;" id="cart" class="cart">
+        <div class="closingCart-wrapper">
        <h3>Cart</h3>
+       <img  onclick="showCart()"class="closingIcon" src="./images/icon-close.svg" alt="" srcset="">
+       </div>
         <hr>
         <div class="cart-body">
           <p>Your cart is empty.</p>
         </div>
         
       </div>
-      <img class="product" src="./images/image-product-1.jpg" alt="" />
+
+      <!--slid show start-->
+      <div class="slideshow-container">
+        
+        <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 4</div>
+    <img src="./images/image-product-1.jpg" style="width:100%">
+    
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 4</div>
+    <img src="./images/image-product-2.jpg" style="width:100%">
+    
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 4</div>
+    <img src="./images/image-product-3.jpg" style="width:100%">
+    
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 4</div>
+    <img src="./images/image-product-4.jpg" style="width:100%">
+    
+  </div>
+   
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!--slid show end-->
+
+
+     
       <div class="wrapper ">
       <h3>Sneaker Company</h3>
       <h1>Fall Limited Edition <br> Sneakers</h1>
