@@ -8,8 +8,7 @@ function addItems(sum) {
   document.querySelector(".amount").innerHTML = amountCounter;
 
   console.log(amountCounter);
-  // showCircle();
-  //return amountCounter;
+  //addToCart();
 }
 
 function subItems() {
@@ -18,7 +17,7 @@ function subItems() {
   }
   document.querySelector(".amount").innerHTML = amountCounter;
   console.log(amountCounter);
-  // return amountCounter;
+  //  addToCart();
 }
 function showCart() {
   let showCart = document.querySelector(".cart");
@@ -47,9 +46,9 @@ function updateCart() {
           <img class="thumpProduct" src="./images/image-product-1-thumbnail.jpg" alt="" srcset="">
           <div class="textCart">
           <p>Autum Limited Edition...</p>
-          <p>$125 x ${amountCounter} $${calculate()}</p>
+          <p>$125 x ${amountCounter} <span> $${calculate()}</span></p>
            </div>
-          <img src="./images/icon-delete.svg" alt="">
+          <img class="deletCart" onclick="deletCart()" src="./images/icon-delete.svg" alt="">
           </div>
           <button id="checkout">Checkout</button>
         </div>
@@ -76,11 +75,18 @@ function updateCountCircle() {
   document.querySelector(".circle").innerHTML = amountCounter;
 }
 function showCircle() {
-  console.log(amountCounter);
+  console.log("hello showcircle " + amountCounter);
   let showCircle = document.querySelector(".circle");
-  if (amountCounter >= 1) {
-    showCircle.style.display === "block";
-  } else {
-    showCircle.style.display === "none";
+  if (showCircle.style.display === "none") {
+    showCircle.style.display = "block";
   }
+  if (amountCounter === 0) {
+    showCircle.style.display = "none";
+  }
+}
+function deletCart() {
+  amountCounter = 0;
+  showCircle();
+  updateCart();
+  updateCountCircle();
 }
