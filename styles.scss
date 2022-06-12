@@ -359,7 +359,7 @@ li {
   header {
     margin-left: 4rem;
     margin-right: 4rem;
-    display: block;
+    position: relative;
   }
   .logo {
     //  margin-left: 30px;
@@ -372,13 +372,14 @@ li {
     display: flex;
     z-index: 10;
     height: auto;
-    background-color: steelblue;
-
+    //  background-color: steelblue;
+    top: 0;
+    left: 0;
     flex-direction: row;
+    background: none;
   }
   .open .navigation {
     display: none;
-
     z-index: 20;
   }
 }
