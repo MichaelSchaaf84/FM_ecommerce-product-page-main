@@ -16,117 +16,155 @@
     <title>Frontend Mentor | E-commerce product page</title>
   </head>
   <body>
-    <header class="header ">
-      <div onclick="toggleMenu(this)">
-      <div class="header-svgs ">
-         <svg
-         
-         class="icon"
-          stroke="currentColor"
-          fill="currentColor"
-          stroke-width="0"
-          viewBox="0 0 24 24"
-          height="2em"
-          width="2em"
-          xmlns="http://www.w3.org/2000/svg"
-          >
-          <path d="M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z"></path>
-        </svg>
-        
-        <img class="logo" src="./images/logo.svg" alt="logo" srcset="" />
-        <nav>
-          <ul class="navigation" id="navigation">
-            <li><a href="#">Collections</a></li>
-            <li><a href="#">Men</a></li>
-            <li><a href="#">Women</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
+    <nav>
+      <div class="wrapper-nav">
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
         </div>
+        <div class="logo">
+          <h4>Sneakers</h4>
         </div>
-        
-      </nav>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
       <div class="rightIcons">
         <div class="cartWithNumber">
-          <div style="display:none;" class="circle" >
-          <p   >0</p>
+          <div style="display: none" class="circle">
+            <p>0</p>
           </div>
-        <img onclick="showCart()" class="cartIcon" src="./images/icon-cart.svg" alt="" srcset="" />
+          <img
+            onclick="showCart()"
+            class="cartIcon"
+            src="./images/icon-cart.svg"
+            alt=""
+            srcset=""
+          />
         </div>
         <img class="avatar" src="./images/image-avatar.png" alt="" srcset="" />
       </div>
-    </header>
+    </nav>
+
     <section>
-      <div style="display:none;" id="cart" class="cart">
+      <div style="display: none" id="cart" class="cart">
         <div class="closingCart-wrapper">
-       <h3>Cart</h3>
-       <img  onclick="showCart()"class="closingIcon" src="./images/icon-close.svg" alt="" srcset="">
-       </div>
-        <hr>
+          <h3>Cart</h3>
+          <img
+            onclick="showCart()"
+            class="closingIcon"
+            src="./images/icon-close.svg"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <hr />
         <div class="cart-body">
           <p>Your cart is empty.</p>
         </div>
-        
       </div>
 
       <!--slid show start-->
       <div class="slideshow-container">
-        
         <!-- Full-width images with number and caption text -->
-  <div class="mySlides fade">
-    <div class="numbertext">1 / 4</div>
-    <img src="./images/image-product-1.jpg" style="width:100%">
-    
-  </div>
-  
-  <div class="mySlides fade">
-    <div class="numbertext">2 / 4</div>
-    <img src="./images/image-product-2.jpg" style="width:100%">
-    
-  </div>
-  
-  <div class="mySlides fade">
-    <div class="numbertext">3 / 4</div>
-    <img src="./images/image-product-3.jpg" style="width:100%">
-    
-  </div>
-  <div class="mySlides fade">
-    <div class="numbertext">4 / 4</div>
-    <img src="./images/image-product-4.jpg" style="width:100%">
-    
-  </div>
-   
-  <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<br>
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 4</div>
+          <img src="./images/image-product-1.jpg" style="width: 100%" />
+        </div>
 
-<!--slid show end-->
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 4</div>
+          <img src="./images/image-product-2.jpg" style="width: 100%" />
+        </div>
 
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 4</div>
+          <img src="./images/image-product-3.jpg" style="width: 100%" />
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 4</div>
+          <img src="./images/image-product-4.jpg" style="width: 100%" />
+        </div>
 
-     
-      <div class="wrapper ">
-      <h3>Sneaker Company</h3>
-      <h1>Fall Limited Edition <br> Sneakers</h1>
-      <p>
-        These low-profile sneakers are your perfect casual wear companion.
-        Featuring a durable rubber outer sole, they’ll withstand everything the
-        weather can offer.
-      </p>
-      <div class="price-wrapper">
-      <div class="flex">
-      <p class="price">$125.00</p>
-      <div class="rabatt">50%</div>
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
-      <div class="old-price">$250.00</div>
-      </div>
-      <div class="btn-wrapper ">
-      <button onclick="subItems()" class="less"><img src="./images/icon-minus.svg" alt="+" srcset=""></button>
-      <p class="amount">0</p>
-      <button onclick="addItems()" class="more"><img src="./images/icon-plus.svg" alt="+" srcset=""></button>
-      </div>
-      <button onclick="addToCart()" id="btnAddToCart"><img class="cart-btn" src="./images/icon-cartWhite.svg" alt="" srcset="">Add to cart</button>
+      <br />
+
+      <!--slid show end-->
+      <div class="wrapper-main">
+        <div class="product-imgs">
+          <img
+            class="main-img"
+            src="./images/image-product-1.jpg"
+            alt=""
+            srcset=""
+          />
+          <div class="thumb-imgs">
+            <img
+              src="./images/image-product-1-thumbnail.jpg"
+              alt=""
+              class="thumb-img"
+            />
+            <img
+              src="./images/image-product-2-thumbnail.jpg"
+              alt=""
+              class="thumb-img"
+            />
+            <img
+              src="./images/image-product-3-thumbnail.jpg"
+              alt=""
+              class="thumb-img"
+            />
+            <img
+              src="./images/image-product-4-thumbnail.jpg"
+              alt=""
+              class="thumb-img"
+            />
+          </div>
+        </div>
+        <div class="wrapper">
+          <h3>Sneaker Company</h3>
+          <h1>
+            Fall Limited Edition <br />
+            Sneakers
+          </h1>
+          <p>
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="price-wrapper">
+            <div class="flex">
+              <p class="price">$125.00</p>
+              <div class="rabatt">50%</div>
+            </div>
+            <div class="old-price">$250.00</div>
+          </div>
+          <div class="btn-wrapper">
+            <button onclick="subItems()" class="less">
+              <img src="./images/icon-minus.svg" alt="+" srcset="" />
+            </button>
+            <p class="amount">0</p>
+            <button onclick="addItems()" class="more">
+              <img src="./images/icon-plus.svg" alt="+" srcset="" />
+            </button>
+          </div>
+          <button onclick="addToCart()" id="btnAddToCart">
+            <img
+              class="cart-btn"
+              src="./images/icon-cartWhite.svg"
+              alt=""
+              srcset=""
+            />Add to cart
+          </button>
+        </div>
       </div>
     </section>
   </body>
