@@ -99,17 +99,22 @@ nav {
     align-items: center;
     justify-content: center;
   }
+
   .product-imgs {
     display: flex;
     flex-direction: column;
     width: 50%;
     margin-right: 80px;
+    cursor: pointer;
   }
   .thumb-img {
     width: auto;
     max-height: 80px;
-    border: 2px solid $orange;
+
     border-radius: 8px;
+  }
+  .active-img {
+    border: 2px solid $orange;
   }
   .thumb-imgs {
     margin-top: 2rem;
@@ -143,15 +148,24 @@ nav {
   .product-imgs {
     display: none;
   }
-  .wrapper-main {
-    display: block;
-  }
+
   .slideshow-container {
     display: flex;
   }
+
+  .wrapper-main {
+    display: flex;
+    margin: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
   nav {
     justify-content: space-between;
     padding: 1rem;
+    z-index: 100;
   }
   .nav-links {
     position: absolute;
@@ -179,17 +193,10 @@ nav {
   .logo {
     margin-left: 0.5rem;
   }
-  .wrapper-main {
-    display: flex;
-    margin: 1rem;
-    align-items: center;
-    justify-content: center;
-  }
 }
 .nav-active {
   transform: translateX(0%);
 }
-
 @keyframes navLinkFade {
   fom {
     opacity: 0;
