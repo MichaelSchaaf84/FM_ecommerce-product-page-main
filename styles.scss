@@ -22,7 +22,9 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   position: relative;
 }
-
+.flex {
+  display: flex;
+}
 /*nav start*/
 nav {
   display: flex;
@@ -76,7 +78,7 @@ nav {
     width: 40%;
   }
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 2000px) {
   nav {
     align-items: center;
   }
@@ -104,8 +106,8 @@ nav {
     margin-right: 80px;
   }
   .thumb-img {
-    width: 100px;
-    height: auto;
+    width: auto;
+    max-height: 80px;
     border: 2px solid $orange;
     border-radius: 8px;
   }
@@ -115,14 +117,38 @@ nav {
     justify-content: space-between;
     overflow: hidden;
   }
-  .wrapper {
-    margin-right: 80px;
-  }
+
   .main-img {
     border-radius: 16px;
   }
 }
+@media screen and(max-width: 900px) {
+  .wrapper-main {
+    flex-direction: column;
+  }
+  .product-imgs {
+    width: 100%;
+    margin-right: 0;
+  }
+  .thumb-img {
+    width: 70px;
+    height: auto;
+  }
+  .wrapper {
+    margin: 1rem;
+    width: 100%;
+  }
+}
 @media screen and (max-width: 600px) {
+  .product-imgs {
+    display: none;
+  }
+  .wrapper-main {
+    display: block;
+  }
+  .slideshow-container {
+    display: flex;
+  }
   nav {
     justify-content: space-between;
     padding: 1rem;
@@ -152,6 +178,12 @@ nav {
   }
   .logo {
     margin-left: 0.5rem;
+  }
+  .wrapper-main {
+    display: flex;
+    margin: 1rem;
+    align-items: center;
+    justify-content: center;
   }
 }
 .nav-active {
@@ -252,6 +284,7 @@ nav {
     font-size: 14px;
     padding: 0.25rem;
     background-color: $pale;
+    margin-left: 1rem;
   }
   .old-price {
     font-size: 14px;
