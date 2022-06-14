@@ -49,8 +49,7 @@ function showCart() {
     showCart.style.display = "none";
   }
 }
-function addToCart(add) {
-  add = amountCounter;
+function addToCart() {
   console.log(amountCounter);
   updateCart();
   updateCountCircle();
@@ -112,6 +111,7 @@ function showCircle() {
 }
 function deletCart() {
   amountCounter = 0;
+  document.querySelector(".amount").innerHTML = amountCounter;
   showCircle();
   updateCart();
   updateCountCircle();
@@ -149,3 +149,11 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
+
+const showImage = () => {
+  const thumbs = document.querySelector(".thumb-img");
+  thumbs.addEventListener("click", () => {
+    console.log("hello from showImage" + thumbs);
+  });
+};
+showImage();
