@@ -12,7 +12,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./css/styles.min.css" />
-    <script src="app.js" defer></script>
+
     <title>Frontend Mentor | E-commerce product page</title>
   </head>
   <body>
@@ -52,7 +52,7 @@
     </nav>
 
     <section>
-      <div style="display: none" id="cart" class="cart">
+      <div id="cart" class="cart">
         <div class="closingCart-wrapper">
           <h3>Cart</h3>
           <img
@@ -108,9 +108,9 @@
           />
           <div class="thumb-imgs">
             <img
+              class="thumb-img active-img"
               src="./images/image-product-1-thumbnail.jpg"
               alt=""
-              class="thumb-img active-img"
             />
             <img
               src="./images/image-product-2-thumbnail.jpg"
@@ -167,5 +167,6 @@
         </div>
       </div>
     </section>
+    <script src="app.js"></script>
   </body>
 </html>

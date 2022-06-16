@@ -1,3 +1,10 @@
+function showImage() {
+  const btn = document.querySelector(".thumb-img");
+  btn.addEventListener("click", () => {
+    console.log("hello");
+  });
+}
+
 const navSlide = () => {
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".nav-links");
@@ -149,11 +156,3 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
-
-const showImage = () => {
-  const thumbs = document.querySelector(".thumb-img");
-  thumbs.addEventListener("click", () => {
-    console.log("hello from showImage" + thumbs);
-  });
-};
-showImage();
