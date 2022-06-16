@@ -79,6 +79,8 @@ nav {
   }
 }
 @media screen and (max-width: 2000px) {
+  .cart {
+  }
   nav {
     align-items: center;
   }
@@ -350,14 +352,15 @@ nav {
   }
 }
 .cart {
-  display: none;
   height: 26vh;
-  width: 92%;
   position: absolute;
-  border-radius: 8px;
-  background: #fff;
-  z-index: 100;
   margin: 1rem;
+  left: 0;
+  right: 0;
+  border-radius: 8px;
+  background: $light_grayish_blue;
+  z-index: 100;
+
   h3 {
     font-size: 16px;
   }
@@ -430,8 +433,8 @@ nav {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
-  position: relative;
+  max-width: 100vh;
+
   margin: auto;
 }
 
